@@ -71,8 +71,8 @@ def load_data(request):
     Ingredient.objects.all().delete()
     Recipe.objects.all().delete()
 
-    ingredient_names = pickle.load(open("ingredients.p"))
-    recipe_names = pickle.load(open("recipes.p"))
+    ingredient_names = pickle.load(open("ingredients.data"))
+    recipe_names = pickle.load(open("recipes.data"))
     ingredients_all_name = [i[28:] for i in ingredient_names]
     recipes_all_name = [n.split('/')[-1] for n in recipe_names]
 
